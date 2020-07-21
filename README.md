@@ -154,3 +154,10 @@ https://insights.stackoverflow.com/survey/2020#technology
 Don't let these stats dissuade you.
 The biggest reason `Go` is not as popular as `JavaScript`, `Python` or `PHP` 
 is simply because the other languages got a _massive_ head start.
+
+Go usually scores well on synthetic benchmarks:
+https://www.techempower.com/benchmarks
+We know from experience that 
+Postgres is usually the bottleneck in our Apps,
+so the programming language doesn't matter quite as much you think.
+What matters is having a sane approach to concurrency and channels. 
