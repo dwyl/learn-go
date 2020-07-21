@@ -135,6 +135,10 @@ The tutorial is almost 7 hours long but covers quite a lot.
 
 + Why choose Go for your next project? (7 min read)
 https://www.softkraft.co/why-choose-go-for-your-next-project
++ Getting started with Go:
+https://medium.com/rungo/working-in-go-workspace-3b0576e0534a
++ How to Write Go Code (_official_):
+https://golang.org/doc/code.html
 
 
 ## Popularity?
