@@ -101,7 +101,14 @@ The tutorial is almost 7 hours long but covers quite a lot.
 
 ## Recommended Reading
 
-- Why choose Go for your next project? (7 min read)
+- Why Go: https://nathany.com/why-go (10 mins)
+- The Case For Go:
+  https://gist.github.com/ungerik/3731476 (many links; 30+ mins)
+- Why should you learn Go?
+  https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65 (8 mins)
+- What’s so great about Go?
+  https://stackoverflow.blog/2020/11/02/go-golang-learn-fast-programming-languages (5 mins)
+- Why choose Go for your next project? (7 mins)
   https://www.softkraft.co/why-choose-go-for-your-next-project
 - Getting started with Go:
   https://medium.com/rungo/working-in-go-workspace-3b0576e0534a
