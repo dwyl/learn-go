@@ -20,9 +20,12 @@ Learn `Golang` to build simple, reliable, and efficient software.
 - [Packages](#packages)
 - [Basic types](#basic-types)
 - [Variables](#variables)
+  - [Variables with initializers](#variables-with-initializers)
+  - [Short variable declarations](#short-variable-declarations)
 - [Functions](#functions)
   - [Functions continued](#functions-continued)
   - [Multiple results](#multiple-results)
+- [Zero values](#zero-values)
 
 ## _Why_?
 
