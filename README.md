@@ -8,6 +8,14 @@ Learn `Golang` to build simple, reliable, and efficient software.
 
 </div>
 
+## Contents
+
+- [Why?](#why)
+- [What?](#what)
+- [How?](#how)
+- [Recommended Reading](#recommended-reading)
+- [Popularity](#popularity)
+
 ## _Why_?
 
 `Go` is a great programming language
