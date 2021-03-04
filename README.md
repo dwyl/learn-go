@@ -8,6 +8,25 @@ Learn `Golang` to build simple, reliable, and efficient software.
 
 </div>
 
+## Contents
+
+- [Why?](#why)
+- [What?](#what)
+- [How?](#how)
+- [Recommended Reading](#recommended-reading)
+- [Popularity](#popularity)
+- [Why Not?](#why-not)
+- [Imports](#imports)
+- [Packages](#packages)
+- [Basic types](#basic-types)
+- [Variables](#variables)
+  - [Variables with initializers](#variables-with-initializers)
+  - [Short variable declarations](#short-variable-declarations)
+- [Functions](#functions)
+  - [Functions continued](#functions-continued)
+  - [Multiple results](#multiple-results)
+- [Zero values](#zero-values)
+
 ## _Why_?
 
 `Go` is a great programming language
@@ -89,12 +108,12 @@ Congratulations you just wrote your first Go program!
 
 If you just want to know the basics, watch Jake Wright's
 "**Learn Go in 12 Minutes**": https://youtu.be/C8LgvuEBraI
+
 [![image](https://user-images.githubusercontent.com/194400/88054566-83ac7e80-cb55-11ea-841c-d5fa72f3c8a5.png)](https://youtu.be/C8LgvuEBraI)
 
-If you want to learn `Go` in more depth,
-FreeCodeCamp Learn Go Programming
-Tutorial for Beginners:
+If you want to learn `Go` in more depth, FreeCodeCamp Learn Go Programming Tutorial for Beginners:
 https://youtu.be/YS4e4q9oBaU
+
 [![image](https://user-images.githubusercontent.com/194400/88054399-2f090380-cb55-11ea-943c-cc230ef0e6d7.png)](https://youtu.be/YS4e4q9oBaU)
 
 The tutorial is almost 7 hours long but covers quite a lot.
@@ -161,3 +180,224 @@ are actually _features_ of Go that lead to simpler more maintainable code.
 > If `Elixir` didn't exist it would be a choice between `Rust` and `Go`.
 > `Go` is a _lot_ simpler and beginner-friendly.
 > `Rust` is "safer" and more performant.
+
+## Imports
+
+This code groups the imports into a parenthesized, "factored" import statement.
+
+You can also write multiple import statements, like:
+
+```go
+import "fmt"
+import "math"
+```
+
+Or
+```go
+import (
+	"fmt"
+	"math/rand"
+)
+```
+
+## Packages
+
+Every Go program is made up of packages.
+
+Programs start running in package `main`.
+
+This program is using the packages with import paths "fmt" and "math/rand".
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	fmt.Println("My favorite number is", rand.Intn(10))
+}
+```
+
+## Basic types
+
+Go's basic types are:
+
+- bool
+- string
+- int  int8  int16  int32  int64
+- uint uint8 uint16 uint32 uint64 uintptr
+- byte // alias for uint8
+- rune // alias for int32, represents a Unicode code point
+- float32 float64
+- complex64 complex128
+
+The example shows variables of several types, and also that variable declarations may be "factored" into blocks, as with import statements.
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/cmplx"
+)
+
+var (
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
+
+func main() {
+	fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
+	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
+	fmt.Printf("Type: %T Value: %v\n", z, z)
+}
+```
+
+The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type. 
+
+
+## Variables
+
+The var statement declares a list of variables; as in function argument lists, the type is last.
+
+A var statement can be at package or function level. We see both in this example.
+
+```go
+package main
+
+import "fmt"
+
+var c, python, java bool
+
+func main() {
+	var i int
+	fmt.Println(i, c, python, java)
+}
+```
+
+
+### Variables with initializers
+
+A var declaration can include initializers, one per variable.
+
+If an initializer is present, the type can be omitted; the variable will take the type of the initializer.
+
+```go
+package main
+
+import "fmt"
+
+var i, j int = 1, 2
+
+func main() {
+	var c, python, java = true, false, "no!"
+	fmt.Println(i, j, c, python, java)
+}
+```
+
+### Short variable declarations
+
+Inside a function, the := short assignment statement can be used in place of a var declaration with implicit type. 
+
+Outside a function, every statement begins with a keyword (var, func, and so on) and so the := construct is not available. 
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var i, j int = 1, 2
+	k := 3
+	c, python, java := true, false, "no!"
+
+	fmt.Println(i, j, k, c, python, java)
+}
+```
+
+## Functions
+
+A function can take zero or more arguments.
+
+In this example, add takes two parameters of type `int`.
+
+Notice that the type comes after the variable name.
+
+```go
+package main
+
+import "fmt"
+
+func add(x int, y int) int {
+	return x + y
+}
+
+func main() {
+	fmt.Println(add(42, 13))
+}
+```
+
+### Functions continued
+
+When two or more consecutive named function parameters share a type, you can omit the type from all but the last.
+
+In this example, we shortened
+
+```go
+x int, y int
+```
+
+to
+
+```go
+x, y int
+```
+
+### Multiple results
+
+A function can return any number of results.
+
+The swap function returns two strings.
+
+```go
+package main
+
+import "fmt"
+
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
+func main() {
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
+}
+```
+
+## Zero values
+
+Variables declared without an explicit initial value are given their zero value.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var i int
+	var f float64
+	var b bool
+	var s string
+	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+}
+```
+
+The zero value is:
+
+- `0` for numeric types,
+- `false` for the boolean type, and
+- `""` (the empty string) for strings.
