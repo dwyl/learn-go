@@ -16,8 +16,12 @@ Learn `Golang` to build simple, reliable, and efficient software.
 - [Recommended Reading](#recommended-reading)
 - [Popularity](#popularity)
 - [Why Not?](#why-not)
+- [Imports](#imports)
 - [Packages](#packages)
 - [Basic types](#basic-types)
+- [Functions](#functions)
+  - [Functions continued](#functions-continued)
+  - [Multiple results](#multiple-results)
 
 ## _Why_?
 
@@ -289,7 +293,7 @@ to
 x, y int
 ```
 
-## Multiple results
+### Multiple results
 
 A function can return any number of results.
 
