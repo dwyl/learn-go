@@ -19,6 +19,7 @@ Learn `Golang` to build simple, reliable, and efficient software.
 - [Imports](#imports)
 - [Packages](#packages)
 - [Basic types](#basic-types)
+- [Variables](#variables)
 - [Functions](#functions)
   - [Functions continued](#functions-continued)
   - [Multiple results](#multiple-results)
@@ -204,7 +205,7 @@ Programs start running in package `main`.
 
 This program is using the packages with import paths "fmt" and "math/rand".
 
-```
+```go
 package main
 
 import (
@@ -254,6 +255,26 @@ func main() {
 ```
 
 The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type. 
+
+
+## Variables
+
+The var statement declares a list of variables; as in function argument lists, the type is last.
+
+A var statement can be at package or function level. We see both in this example.
+
+```go
+package main
+
+import "fmt"
+
+var c, python, java bool
+
+func main() {
+	var i int
+	fmt.Println(i, c, python, java)
+}
+```
 
 ## Functions
 
