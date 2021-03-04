@@ -108,12 +108,12 @@ Congratulations you just wrote your first Go program!
 
 If you just want to know the basics, watch Jake Wright's
 "**Learn Go in 12 Minutes**": https://youtu.be/C8LgvuEBraI
+
 [![image](https://user-images.githubusercontent.com/194400/88054566-83ac7e80-cb55-11ea-841c-d5fa72f3c8a5.png)](https://youtu.be/C8LgvuEBraI)
 
-If you want to learn `Go` in more depth,
-FreeCodeCamp Learn Go Programming
-Tutorial for Beginners:
+If you want to learn `Go` in more depth, FreeCodeCamp Learn Go Programming Tutorial for Beginners:
 https://youtu.be/YS4e4q9oBaU
+
 [![image](https://user-images.githubusercontent.com/194400/88054399-2f090380-cb55-11ea-943c-cc230ef0e6d7.png)](https://youtu.be/YS4e4q9oBaU)
 
 The tutorial is almost 7 hours long but covers quite a lot.
