@@ -16,6 +16,7 @@ Learn `Golang` to build simple, reliable, and efficient software.
 - [Recommended Reading](#recommended-reading)
 - [Popularity](#popularity)
 - [Why Not?](#why-not)
+- [Packages](#packages)
 - [Basic types](#basic-types)
 
 ## _Why_?
@@ -172,6 +173,45 @@ are actually _features_ of Go that lead to simpler more maintainable code.
 > `Go` is a _lot_ simpler and beginner-friendly.
 > `Rust` is "safer" and more performant.
 
+## Imports
+
+This code groups the imports into a parenthesized, "factored" import statement.
+
+You can also write multiple import statements, like:
+
+```go
+import "fmt"
+import "math"
+```
+
+Or
+```go
+import (
+	"fmt"
+	"math/rand"
+)
+```
+
+## Packages
+
+Every Go program is made up of packages.
+
+Programs start running in package `main`.
+
+This program is using the packages with import paths "fmt" and "math/rand".
+
+```
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	fmt.Println("My favorite number is", rand.Intn(10))
+}
+```
 
 ## Basic types
 
@@ -210,3 +250,62 @@ func main() {
 ```
 
 The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type. 
+
+## Functions
+
+A function can take zero or more arguments.
+
+In this example, add takes two parameters of type `int`.
+
+Notice that the type comes after the variable name.
+
+```go
+package main
+
+import "fmt"
+
+func add(x int, y int) int {
+	return x + y
+}
+
+func main() {
+	fmt.Println(add(42, 13))
+}
+```
+
+### Functions continued
+
+When two or more consecutive named function parameters share a type, you can omit the type from all but the last.
+
+In this example, we shortened
+
+```go
+x int, y int
+```
+
+to
+
+```go
+x, y int
+```
+
+## Multiple results
+
+A function can return any number of results.
+
+The swap function returns two strings.
+
+```go
+package main
+
+import "fmt"
+
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
+func main() {
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
+}
+```
