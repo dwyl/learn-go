@@ -10,22 +10,28 @@ Learn `Golang` to build simple, reliable, and efficient software.
 
 ## Contents
 
-- [Why?](#why)
-- [What?](#what)
-- [How?](#how)
-- [Recommended Reading](#recommended-reading)
-- [Popularity](#popularity)
-- [Why Not?](#why-not)
-- [Imports](#imports)
-- [Packages](#packages)
-- [Basic types](#basic-types)
-- [Variables](#variables)
-  - [Variables with initializers](#variables-with-initializers)
-  - [Short variable declarations](#short-variable-declarations)
-- [Functions](#functions)
-  - [Functions continued](#functions-continued)
-  - [Multiple results](#multiple-results)
-- [Zero values](#zero-values)
+- [Learn `Golang`](#learn-golang)
+	- [Contents](#contents)
+	- [_Why_?](#why)
+	- [_What_?](#what)
+	- [_Who_?](#who)
+	- [_How_?](#how)
+		- [Hello World!](#hello-world)
+		- [Learning Resources](#learning-resources)
+	- [Recommended Reading](#recommended-reading)
+	- [Popularity?](#popularity)
+		- [Why _Not_?](#why-not)
+- [How?](#how-1)
+	- [Imports](#imports)
+	- [Packages](#packages)
+	- [Basic types](#basic-types)
+	- [Variables](#variables)
+		- [Variables with initializers](#variables-with-initializers)
+		- [Short variable declarations](#short-variable-declarations)
+	- [Functions](#functions)
+		- [Functions continued](#functions-continued)
+		- [Multiple results](#multiple-results)
+	- [Zero values](#zero-values)
 
 ## _Why_?
 
@@ -141,16 +147,20 @@ it's nowhere _near_ as used/known
 as Google would like you to believe.
 For example it's not in the Top 10 languages on GitHub:
 https://octoverse.github.com/#top-languages
+
 <img width="1171" alt="github-most-popular-languages" src="https://user-images.githubusercontent.com/194400/87814203-2d8cc200-c85b-11ea-8229-c5d1b4dae2d4.png">
 
 And it's used by fewer than 9% of developers (_who answered the survey_)
 on StackOverflow.
-https://insights.stackoverflow.com/survey/2020#technology
-<img width="802" alt="stackoverflow-dev-survey-languages" src="https://user-images.githubusercontent.com/194400/87814783-4c3f8880-c85c-11ea-9b2a-c7e1c068491e.png">
+https://survey.stackoverflow.co/2025/technology/
+
+<img alt="stackoverflow-dev-survey-languages" src="https://github.com/user-attachments/assets/4d88c452-5410-4f82-8fba-9186f5c18f82" />
 
 Don't let these stats dissuade you.
 The biggest reason `Go` is not as popular as `JavaScript`, `Python` or `PHP`
 is simply because the other languages got a _massive_ head start.
+`Go` usage has more than doubled in the last 5 years.
+https://survey.stackoverflow.co/2020#most-popular-technologies
 
 Go usually scores well on synthetic benchmarks:
 https://www.techempower.com/benchmarks
@@ -174,18 +184,28 @@ Common complaints/gripes developers have with `Go` include:
 We feel all the issues (_with the exception of error handling_)
 are actually _features_ of Go that lead to simpler more maintainable code.
 
-> As noted in ["Why Elixir"](https://github.com/dwyl/learn-elixir/issues/102) > `Go` is our 3rd Choice for programming languages.
-> We use `Elixir` because Phoenix Channels makes Real Time _easy_
+> As noted in ["Why Elixir"](https://github.com/dwyl/learn-elixir/issues/102) >
+> `Go` is our **3<sup>rd</sup> Choice** for programming languages.
+> We use `Elixir` because **`Phoenix` Channels** makes **Real Time** _easy_
 > and `Nerves` makes building, deploying and maintaining IoT a _breeze_.
 > If `Elixir` didn't exist it would be a choice between `Rust` and `Go`.
 > `Go` is a _lot_ simpler and beginner-friendly.
 > `Rust` is "safer" and more performant.
 
+# How?
+
+The easiest way to get started with `Go`
+is in your browser without installing anything:
+[go.dev/play](https://go.dev/play/)
+
+<img src="https://github.com/user-attachments/assets/da2f58ed-077b-4545-af12-349fe36ba91d" />
+
 ## Imports
 
-This code groups the imports into a parenthesized, "factored" import statement.
+This code groups the imports into a parenthesized,
+"factored" `import` statement.
 
-You can also write multiple import statements, like:
+You can also write multiple import statements:
 
 ```go
 import "fmt"
@@ -193,6 +213,7 @@ import "math"
 ```
 
 Or
+
 ```go
 import (
 	"fmt"
@@ -204,7 +225,7 @@ import (
 
 Every Go program is made up of packages.
 
-Programs start running in package `main`.
+Programs start running in `package main`.
 
 This program is using the packages with import paths "fmt" and "math/rand".
 
@@ -225,8 +246,8 @@ func main() {
 
 Go's basic types are:
 
-- bool
-- string
+- `bool` - boolean (`true` or `false`)
+- `string` - a [`UTF-8`](https://en.wikipedia.org/wiki/UTF-8) encoded  `string`
 - int  int8  int16  int32  int64
 - uint uint8 uint16 uint32 uint64 uintptr
 - byte // alias for uint8
