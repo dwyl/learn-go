@@ -139,6 +139,8 @@ The tutorial is almost 7 hours long but covers quite a lot.
   https://medium.com/rungo/working-in-go-workspace-3b0576e0534a
 - How to Write Go Code (_official_):
   https://golang.org/doc/code.html
+- 2025 Go Developer Survey:
+  https://go.dev/blog/survey2025
 
 ## Popularity?
 
