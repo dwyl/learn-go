@@ -145,13 +145,13 @@ The tutorial is almost 7 hours long but covers quite a lot.
 Despite the simplicity and performance of `Go`,
 it's nowhere _near_ as used/known
 as Google would like you to believe.
-For example it's not in the Top 10 languages on GitHub:
-https://octoverse.github.com/#top-languages
+`Go` recently made it into the Top 10 languages on `GitHub`:
+[github.blog/news-insights/octoverse](https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/#the-top-programming-languages-of-2025-typescript-jumps-to-1-while-python-takes-2)
 
-<img width="1171" alt="github-most-popular-languages" src="https://user-images.githubusercontent.com/194400/87814203-2d8cc200-c85b-11ea-8229-c5d1b4dae2d4.png">
+<img alt="github-most-popular-languages" src="https://github.com/user-attachments/assets/c404d71e-93b9-4aa1-9ef6-fabac60427aa" />
 
-And it's used by fewer than 9% of developers (_who answered the survey_)
-on StackOverflow.
+And it's used by 16%+ of developers (_who answered the survey_)
+on StackOverflow: 
 https://survey.stackoverflow.co/2025/technology/
 
 <img alt="stackoverflow-dev-survey-languages" src="https://github.com/user-attachments/assets/4d88c452-5410-4f82-8fba-9186f5c18f82" />
